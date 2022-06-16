@@ -1,0 +1,857 @@
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1
+$ git init
+Initialized empty Git repository in C:/Users/Rashika/Desktop/project1/.git/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (master)
+$ git checkout -b staging
+Switched to a new branch 'staging'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ touch test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ cat test1
+This is first commit
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git remote add origin https://github.com/agarwalrashika00/test_project.git
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push origin staging
+error: src refspec staging does not match any
+error: failed to push some refs to 'https://github.com/agarwalrashika00/test_project.git'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push
+fatal: The current branch staging has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin staging
+
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push --set-upstream origin staging
+error: src refspec staging does not match any
+error: failed to push some refs to 'https://github.com/agarwalrashika00/test_project.git'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 602 bytes | 35.00 KiB/s, done.
+From https://github.com/agarwalrashika00/test_project
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push --set-upstream origin staging
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'staging' on GitHub by visiting:
+remote:      https://github.com/agarwalrashika00/test_project/pull/new/staging
+remote:
+To https://github.com/agarwalrashika00/test_project.git
+ * [new branch]      staging -> staging
+branch 'staging' set up to track 'origin/staging'.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ ls
+README.md  test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git status
+On branch staging
+Your branch is up to date with 'origin/staging'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git add .
+warning: LF will be replaced by CRLF in test1.
+The file will have its original line endings in your working directory
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git commit -m "added test1"
+[staging 5a22a27] added test1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/agarwalrashika00/test_project.git
+   c237fc9..5a22a27  staging -> staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop
+$ cd project2
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ git clone https://github.com/agarwalrashika00/test_project.git
+Cloning into 'test_project'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ ls
+test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ ls -a
+./  ../  test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ ls
+README.md
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git branch
+* main
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ git remote add origin https://github.com/agarwalrashika00/test_project.git
+fatal: not a git repository (or any of the parent directories): .git
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git remote add origin https://github.com/agarwalrashika00/test_project.git
+error: remote origin already exists.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git clone -b staging https://github.com/agarwalrashika00/test_project.git
+Cloning into 'test_project'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git bran
+git: 'bran' is not a git command. See 'git --help'.
+
+The most similar commands are
+        branch
+        blame
+        clean
+        prune
+        var
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git branch
+* main
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ ls
+README.md  test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ ls
+README.md  test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ git branch
+* staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset --hard HEAD~1
+fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset -hard HEAD~1
+error: did you mean `--hard` (with two dashes)?
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset --hard HEAD~1
+fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset --hard HEAD ~ 1
+fatal: C:/Users/Rashika: 'C:/Users/Rashika' is outside repository at 'C:/Users/Rashika/Desktop/project2/test_project'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test_project/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git add .
+warning: adding embedded git repository: test_project
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> test_project
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached test_project
+hint:
+hint: See "git help submodule" for more information.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git commit -m "msg"
+[main 6f8990f] msg
+ 1 file changed, 1 insertion(+)
+ create mode 160000 test_project
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset --hard HEAD ~ 1
+fatal: C:/Users/Rashika: 'C:/Users/Rashika' is outside repository at 'C:/Users/Rashika/Desktop/project2/test_project'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git reset --hard HEAD~1
+warning: unable to rmdir 'test_project': Directory not empty
+HEAD is now at c237fc9 Initial commit
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ ls
+README.md  test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ c test_project/
+bash: c: command not found
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ ls
+README.md  test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rmdir test_project/
+rmdir: failed to remove 'test_project/': Directory not empty
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rmdir -f test_project/
+rmdir: unknown option -- f
+Try 'rmdir --help' for more information.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rmdir --f test_project/
+rmdir: unknown option -- f
+Try 'rmdir --help' for more information.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rm -r test_project/
+rm: remove write-protected regular file 'test_project/.git/objects/pack/pack-d7f6624f84cc7d201467905b3785e3a582b52a94.idx'? y
+rm: remove write-protected regular file 'test_project/.git/objects/pack/pack-d7f6624f84cc7d201467905b3785e3a582b52a94.pack'?
+rm: cannot remove 'test_project/.git/objects/pack': Directory not empty
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rm -r test_project/
+rm: remove write-protected regular file 'test_project/.git/objects/pack/pack-d7f6624f84cc7d201467905b3785e3a582b52a94.pack'?
+rm: cannot remove 'test_project/.git/objects/pack': Directory not empty
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rm test_project/
+rm: cannot remove 'test_project/': Is a directory
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ rm -r test_project/
+rm: remove write-protected regular file 'test_project/.git/objects/pack/pack-d7f6624f84cc7d201467905b3785e3a582b52a94.pack'? yes
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ ls
+README.md
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ git branch staging
+fatal: not a git repository (or any of the parent directories): .git
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2
+$ git init
+Initialized empty Git repository in C:/Users/Rashika/Desktop/project2/.git/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (master)
+$ git branch staging
+fatal: not a valid object name: 'master'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (master)
+$ git branch staging
+fatal: not a valid object name: 'master'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (master)
+$ git checkout -b stag
+Switched to a new branch 'stag'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ git branch -d stag
+fatal: Couldn't look up commit object for HEAD
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ git branch
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ ls
+test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git branch staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git switch staging
+Switched to branch 'staging'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ git clone -b staging https://github.com/agarwalrashika00/test_project.git
+Cloning into 'test_project'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ ls
+README.md  test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ git commit -m "second commit"
+[staging 1be0f71] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ git push origin staging
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/agarwalrashika00/test_project.git
+   5a22a27..1be0f71  staging -> staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project/test_project (staging)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ cd ...
+bash: cd: ...: No such file or directory
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop
+$ cd project1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git add .
+warning: LF will be replaced by CRLF in test1.
+The file will have its original line endings in your working directory
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git commit -m "third commit"
+[staging 9fbc87d] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push origin staging
+To https://github.com/agarwalrashika00/test_project.git
+ ! [rejected]        staging -> staging (fetch first)
+error: failed to push some refs to 'https://github.com/agarwalrashika00/test_project.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git pull origin staging
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 274 bytes | 7.00 KiB/s, done.
+From https://github.com/agarwalrashika00/test_project
+ * branch            staging    -> FETCH_HEAD
+   5a22a27..1be0f71  staging    -> origin/staging
+Auto-merging test1
+CONFLICT (content): Merge conflict in test1
+Automatic merge failed; fix conflicts and then commit the result.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging|MERGING)
+$ git push origin staging
+To https://github.com/agarwalrashika00/test_project.git
+ ! [rejected]        staging -> staging (non-fast-forward)
+error: failed to push some refs to 'https://github.com/agarwalrashika00/test_project.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging|MERGING)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging|MERGING)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging|MERGING)
+$ git commit -m "third commit on merging with remote"
+[staging 5d554e9] third commit on merging with remote
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git push origin staging
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 608 bytes | 608.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/agarwalrashika00/test_project.git
+   1be0f71..5d554e9  staging -> staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git switch mas
+fatal: invalid reference: mas
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (staging)
+$ git switch main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git merge staging
+Updating c237fc9..5d554e9
+Fast-forward
+ test1 | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ ls
+README.md  test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ cat test1
+This is third commit
+This was second commit
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git branch testing
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git checkout testing
+Switched to branch 'testing'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git checkout testing
+Already on 'testing'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ ls
+README.md  test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git commit -m "A is an alphabet"
+[testing 5e520de] A is an alphabet
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git commit -m "B is an alphabet"
+[testing b3d1992] B is an alphabet
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git commit -m "C is an alphabet"
+[testing d13a1b1] C is an alphabet
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git push origin testing
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 823 bytes | 823.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'testing' on GitHub by visiting:
+remote:      https://github.com/agarwalrashika00/test_project/pull/new/testing
+remote:
+To https://github.com/agarwalrashika00/test_project.git
+ * [new branch]      testing -> testing
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git merge staging
+Already up to date.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git commit -m "1 is a number"
+[main 8dc05ed] 1 is a number
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git commit -m "2 is a number"
+[main bf73b5b] 2 is a number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git commit -m "3 is a number"
+[main 289920e] 3 is a number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 808 bytes | 161.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/agarwalrashika00/test_project.git
+   c237fc9..289920e  main -> main
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (main)
+$ git switch testing
+Switched to branch 'testing'
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git rebase main
+Auto-merging test1
+CONFLICT (content): Merge conflict in test1
+error: could not apply 5e520de... A is an alphabet
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5e520de... A is an alphabet
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 1/3)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 1/3)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 1/3)
+$ git commit
+[detached HEAD c6b310e] rebasing testing into master
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 1/3)
+$ git rebase ma
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 1/3)
+$ git rebase --continue
+Auto-merging test1
+CONFLICT (content): Merge conflict in test1
+error: could not apply b3d1992... B is an alphabet
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply b3d1992... B is an alphabet
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 2/3)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 2/3)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 2/3)
+$ git commit -m "rebasing step 2"
+[detached HEAD b12a727] rebasing step 2
+ 1 file changed, 2 insertions(+)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 2/3)
+$ git rebase --continue
+Auto-merging test1
+CONFLICT (content): Merge conflict in test1
+error: could not apply d13a1b1... C is an alphabet
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply d13a1b1... C is an alphabet
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 3/3)
+$ vim test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 3/3)
+$ cat test1
+3 is a number
+A is an alphabet
+
+B is an alphabet
+
+C is an alphabet
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 3/3)
+$ git add .
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 3/3)
+$ git commit -m "rebasing step 3"
+[detached HEAD fa67eb9] rebasing step 3
+ 1 file changed, 2 insertions(+)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing|REBASE 3/3)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/testing.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ git log
+commit fa67eb99cc5d447b65dbd32a3b2067b48a152432 (HEAD -> testing)
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:47:24 2022 +0530
+
+    rebasing step 3
+
+commit b12a727ca645accd9cac24d9e6edb89eba79a622
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:45:11 2022 +0530
+
+    rebasing step 2
+
+commit c6b310ea5ab10efe197a9021a346bd65e320742a
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:42:15 2022 +0530
+
+    rebasing testing into master
+
+commit 289920eb91572b22fe742912438524dcf43510d6 (origin/main, main)
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:37:05 2022 +0530
+
+    3 is a number
+
+commit bf73b5b995ada34e5f2d9e93a816b696e60678bb
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:36:41 2022 +0530
+
+    2 is a number
+
+commit 8dc05ed70bf139126d71144553723cc3ca393bbf
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:35:32 2022 +0530
+
+    1 is a number
+
+commit 5d554e97feabf10fd8fc6c52125f61b2ab7e5b09 (origin/staging, staging)
+Merge: 9fbc87d 1be0f71
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:26:46 2022 +0530
+
+    third commit on merging with remote
+
+commit 9fbc87d7ef51ed9fd190b2b3abc781f94d9d54c5
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:23:32 2022 +0530
+
+    third commit
+
+commit 1be0f7123c004bced0f2b71f15e992a123f6a2c3
+Author: Rashika <agarwalrashika00@gmail.com>
+Date:   Fri Jun 17 00:21:17 2022 +0530
+
+    second commit
+
+commit 5a22a2717a1af3bbf176ce10daa5342ced704dc5
+Author: Rashika <agarwalrashika00@gmail.com>
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project1 (testing)
+$ cd ..
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop
+$ cd project2
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2 (stag)
+$ cd test_project/
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ git checkout --track origin/testing
+fatal: 'origin/testing' is not a commit and a branch 'testing' cannot be created from it
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ git branch
+  main
+* staging
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ git branch main
+fatal: a branch named 'main' already exists
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (staging)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git checkout --track origin/testing
+fatal: 'origin/testing' is not a commit and a branch 'testing' cannot be created from it
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git fetch
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 27 (delta 2), reused 25 (delta 0), pack-reused 0
+Unpacking objects: 100% (27/27), 2.25 KiB | 14.00 KiB/s, done.
+From https://github.com/agarwalrashika00/test_project
+   c237fc9..289920e  main       -> origin/main
+   5a22a27..5d554e9  staging    -> origin/staging
+ * [new branch]      testing    -> origin/testing
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git checkout --track origin/testing
+Switched to a new branch 'testing'
+branch 'testing' set up to track 'origin/testing'.
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (testing)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git merge testing
+Updating c237fc9..d13a1b1
+Fast-forward
+ test1 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ git diff main testing
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$ cat test1
+C is an alphabet
+
+Rashika@DESKTOP-NKH1NAA MINGW64 ~/Desktop/project2/test_project (main)
+$
+
